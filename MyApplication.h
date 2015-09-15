@@ -4,7 +4,7 @@
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 #include <gl_core_4_4.h> 
-#include <GLFW/glfw3.h> 
+#include <GLFW/glfw3.h>
 
 class Application
 {
