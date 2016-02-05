@@ -32,7 +32,7 @@ int Application::initWindow()
 	auto minor = ogl_GetMinorVersion();
 	printf_s("GL: %i.%i\n", major, minor);
 
-	Gizmos::create();
+	//Gizmos::create();
 	view = glm::lookAt(vec3(6, 25, 25), vec3(0), vec3(0, 1, 0));
 	projection = glm::perspective(glm::pi<float>() * 0.25f, 16 / 9.f, 0.1f, 1000.f);
 }
@@ -55,7 +55,7 @@ void Application::update()
 
 int Application::terminate()
 {
-	Gizmos::destroy();
+	//Gizmos::destroy();
 	glfwDestroyWindow(window);
 	glfwTerminate();
 	return 0;
@@ -66,22 +66,22 @@ void Application::draw()
 	GLfloat fTime = glfwGetTime();
 
 
-	Gizmos::clear();
-	Gizmos::addTransform(glm::mat4(1));
+	//Gizmos::clear();
+	//Gizmos::addTransform(glm::mat4(1));
 
 	vec4 white(1);
 	vec4 black(0, 0, 0, 1);
 
-	for (int i = 0; i < 21; ++i)
-	{
-		Gizmos::addLine(vec3(-10 + i, 0, 10),
-			vec3(-10 + i, 0, -10),
-			i == 10 ? white : black);
+	//for (int i = 0; i < 21; ++i)
+	//{
+	//	Gizmos::addLine(vec3(-10 + i, 0, 10),
+	//		vec3(-10 + i, 0, -10),
+	//		i == 10 ? white : black);
 
-		Gizmos::addLine(vec3(10, 0, -10 + i),
-			vec3(-10, 0, -10 + i),
-			i == 10 ? white : black);
-	}
+	//	Gizmos::addLine(vec3(10, 0, -10 + i),
+	//		vec3(-10, 0, -10 + i),
+	//		i == 10 ? white : black);
+	//}
 
 	Planet sun, mercury, venus, earth, earthMoon, mars,
 		   jupiter, saturn, uranus, neptune, pluto;
@@ -191,20 +191,20 @@ void Application::draw()
 	neptune.OrbitAround(sun, fTime*.35f);
 	pluto.OrbitAround(sun, fTime*.35f);
 
-	Gizmos::addSphere(sun.position, sun.radius, 18, 18, sun.color, &mat4(1));
+	//Gizmos::addSphere(sun.position, sun.radius, 18, 18, sun.color, &mat4(1));
 
-	Gizmos::addSphere(mercury.position, mercury.radius, 10, 10, mercury.color, &mat4(1));
-	Gizmos::addSphere(venus.position, venus.radius, 10, 10, venus.color, &mat4(1));
-	Gizmos::addSphere(earth.position, earth.radius, 10, 10, earth.color, &mat4(1));
-	Gizmos::addSphere(earthMoon.position, earthMoon.radius, 10, 10, earthMoon.color, &mat4(1));
-	Gizmos::addSphere(mars.position, mars.radius, 10, 10, mars.color, &mat4(1));
-	Gizmos::addSphere(jupiter.position, jupiter.radius, 10, 10, jupiter.color, &mat4(1));
-	Gizmos::addSphere(saturn.position, saturn.radius, 10, 10, saturn.color, &mat4(1));
-	Gizmos::addSphere(uranus.position, uranus.radius, 10, 10, uranus.color, &mat4(1));
-	//Gizmos::addSphere(neptune.position, neptune.radius, 10, 10, neptune.color, &mat4(1));
-	//Gizmos::addSphere(pluto.position, pluto.radius, 10, 10, pluto.color, &mat4(1));
+	//Gizmos::addSphere(mercury.position, mercury.radius, 10, 10, mercury.color, &mat4(1));
+	//Gizmos::addSphere(venus.position, venus.radius, 10, 10, venus.color, &mat4(1));
+	//Gizmos::addSphere(earth.position, earth.radius, 10, 10, earth.color, &mat4(1));
+	//Gizmos::addSphere(earthMoon.position, earthMoon.radius, 10, 10, earthMoon.color, &mat4(1));
+	//Gizmos::addSphere(mars.position, mars.radius, 10, 10, mars.color, &mat4(1));
+	//Gizmos::addSphere(jupiter.position, jupiter.radius, 10, 10, jupiter.color, &mat4(1));
+	//Gizmos::addSphere(saturn.position, saturn.radius, 10, 10, saturn.color, &mat4(1));
+	//Gizmos::addSphere(uranus.position, uranus.radius, 10, 10, uranus.color, &mat4(1));
+	////Gizmos::addSphere(neptune.position, neptune.radius, 10, 10, neptune.color, &mat4(1));
+	////Gizmos::addSphere(pluto.position, pluto.radius, 10, 10, pluto.color, &mat4(1));
 
 
-	Gizmos::draw(projection * view);
+	//Gizmos::draw(projection * view);
 }
 

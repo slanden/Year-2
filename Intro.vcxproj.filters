@@ -44,10 +44,17 @@
     <ClInclude Include="Planet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Intro.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dep\bin\shaders\simpleShader.frag" />
+    <None Include="dep\bin\shaders\simpleShader.vert" />
   </ItemGroup>
 </Project>

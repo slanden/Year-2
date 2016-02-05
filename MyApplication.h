@@ -3,8 +3,10 @@
 #include "Gizmos.h"
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
-#include <gl_core_4_4.h> 
-#include <GLFW/glfw3.h>
+#include <gl_core_4_4.h>
+#define GLEW_STATIC
+#include <GL\glew.h>
+#include <GLFW\glfw3.h>
 
 class Application
 {
